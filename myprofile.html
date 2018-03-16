@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Professional Profile - Susan Stufflebean</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+<header>
+  <!-- Landing Page Content -->	
+  <span class="fixedHeaderName"><i>Susan Stufflebean</i></span>
+  <span class="fixedHeaderContact"><a href="mailto:susanstufflebean@gmail.com" class="emailInfo">Contact Me</a></span>
+  <div class="landingBG">
+    <h1>Welcome to my Portfolio</h1>
+	<p>My name is Susan Stufflebean and I am attempting to write my first webpage. I must admit this is much harder then I had expected as it is not anything I am accustom to. I have been watching the Treehouse Videos but since I am not utilizing the technology I am having a hard time retaining it. I am hoping that completeing this program will lead me in a direction to become a full time Web Developer.</p>	
+	</div>
+</header>
+<main>
+  <!-- aboutMe section content -->
+  <div class="aboutMe">
+    <h1 >My Hobbies and Knowledge</h1>
+    <p> I am a mother of three, one has graduated Indiana State, and the other are in middle school going into high school soon. Once the youngest are off to college my dream is to move to the beach where it is nice and warm all year long.</p>
+   <!-- Container that wraps slides and "dots" -->
+   <div class="slideContainer">
+   <!-- Container that wraps slides, prev / next button, caption, and slide number -->
+   <div class="slideshow-container">
+    <!-- Images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 8</div>
+      <img src="images/familyOne.JPG" alt="Family Photo" class="landscape" style="width:100%; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 8</div>
+      <img src="images/familyTwo.JPG" alt="Family Photo" class="landscape" style="width:100%; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="images/familyThree.JPG" alt="Family Photo" class="portrait" style="width:auto; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 8</div>
+      <img src="images/familyFour.jpg" alt="Family Photo" class="portrait" style="width:auto; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 8</div>
+      <img src="images/familyFive.JPG" alt="Family Photo" class="landscape" style="width:100%; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 8</div>
+      <img src="images/familySix.JPG" alt="Family Photo" class="landscape" style="width:100%; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 8</div>
+      <img src="images/familyTripOne.JPG" alt="Family Trip" class="landscape" style="width:100%; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 8</div>
+      <img src="images/familyTripTwo.JPG" alt="Family Trip" class="portrait" style="width:auto; max-height: 300px;">
+      <div class="text">Caption Text</div>
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span> 
+  </div> 
+	</div>
+	</div>
+  <!-- Script for slideshow -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</main>
+</body>
+</html>
+
+ 

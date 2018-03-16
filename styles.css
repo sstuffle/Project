@@ -1,0 +1,334 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* Ensure specified sizes includes border */
+* {
+	box-sizing: border-box;
+}
+/** specify column widths **/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/* Give body color */
+body {
+    background-color: #DFD2C0;
+}
+/* Style the fixedHeaderName tab */
+.fixedHeaderName {
+	background-color: #333;
+	color: #67D29E;
+	position: fixed;
+	top: 5%;
+	left: 0%;
+	font-size: 30px;
+	padding: 5px 10px
+}
+/* Style the fixedHeaderContact tab */
+.fixedHeaderContact a {
+	background-color: #333;
+	color: #67D29E;
+	position: fixed;
+	top: 12%;
+	left: 0%;
+	font-size: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+/* Style LandingBG to center items, take 100% viewport height, etc*/
+.landingBG{
+	background-color: aliceblue;
+	height: 100vh;
+  	width: 100%;
+  	margin: auto;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+}
+/* Style landingBG paragraph content */
+.landingBG p {
+	font-family: Raleway, sans-serif;
+	font-size: 22px;
+}
+/* Style landingBG h1 */
+.landingBG h1 {
+	color: #3A83CF;
+	font-family: Raleway, sans-serif;
+	font-size: 28px;
+	text-shadow: 1px 1px 1px black;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+/* Hide the slideshow images by default */
+.mySlides {
+    display: none;
+}
+/* Style the next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #3984CF;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* Position the "previous button" to the left */
+.prev {
+	left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+/* On hover, add a colored background to prev/next buttons */
+.prev:hover, .next:hover {
+  background-color: #67D29E;
+}
+/* Style the caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+/* Style the umber text (1/8 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;text-shadow: 1px 1px 0px black;
+}
+/* Style the dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px;
+  background-color: #67D29E;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #3983CF;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* Arrange aboutMe section appriopriately onto center of page */
+.aboutMe {
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+	background-color: #DFD2C0;
+}
+/* Style aboutMe paragraph content */
+.aboutMe p {
+	color: black;
+	font-family: Raleway, sans-serif;
+	font-size: 22px;
+}
+/* Style aboutMe h1 */
+.aboutMe h1 {
+	font-family: Raleway, sans-serif;
+	font-size: 28px;
+	color: #67D29E;text-shadow: 1px 1px 1px black;
+}
+/* Media query adjustments */
+@media screen and (min-height: 1px) and (max-height: 365px) {
+.fixedHeaderName {
+		font-size: 16px!important;
+		top: 0%!important;
+	}
+	.fixedHeaderContact a {
+		font-size: 16px!important;
+		top: 9%!important;
+	}
+	.landingBG h1 {
+		font-size:22px!important;
+	}
+	.landingBG p {
+		font-size:15px!important;
+	}
+	.aboutMe h1 {
+		font-size:22px!important;
+	}
+	.aboutMe p {
+		font-size:15px!important;
+	}
+}
+@media screen and (min-height: 540px) and (max-height: 999px) {
+	.fixedHeaderContact a {
+		top: 8%!important;
+	}
+	.portrait, .landscape {
+		max-height: 500px!important;
+	}
+}
+@media screen and (min-height: 1000px) and (max-height: 5000px) {
+	.fixedHeaderContact a {
+		top: 6%!important;
+	}
+}
+@media screen and (min-width: 1px) and (max-width: 320px) {
+	.fixedHeaderName {
+		font-size: 20px;
+		padding: 4px 10px 4px 2px;
+		top: 0%;
+	}
+	.fixedHeaderContact a {
+		font-size: 20px;
+		padding: 4px 10px 4px 2px;
+		top: 9%;
+	}
+	h1 {
+		width: 100%;
+		font-size: 24px!important;
+	}
+	p {
+		width: 100%;
+		font-size: 18px!important;
+	}
+	.slideContainer {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 321px) and (max-width: 650px) {
+	.fixedHeaderName {
+		font-size: 20px;
+		padding: 4px 10px 4px 2px;
+		top: 0%;
+	}
+	.fixedHeaderContact a {
+		font-size: 20px;
+		padding: 4px 10px 4px 2px;
+		top: 9%;
+	}
+	h1 {
+		width: 100%;
+		font-size: 24px!important;
+	}
+	p {
+		width: 100%;
+		font-size: 18px!important;
+	}
+	.slideContainer {
+		max-width:500px;
+	}
+}
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+	.fixedHeaderName {
+		padding: 4px 10px 4px 2px;
+		top: 0%;
+		font-size: 25px;
+	}
+	.fixedHeaderContact a {
+		padding: 4px 10px 4px 2px;
+		top: 11%;
+		font-size: 25px;
+	}
+	h1 {
+		width: 80%;
+	}
+	p {
+		width: 80%;
+	}
+	.landingBG h1{
+		font-size: 30px;
+	}
+	.landingBG p {
+		font-size: 20px;
+	}
+	.slideContainer {
+		max-width:500px;
+	}
+}
+@media screen and (min-width: 1001px) and (max-width: 6500px) {
+	.fixedHeaderName {
+		padding: 4px 10px 4px 2px;
+		top: 0%;
+		font-size: 25px;
+	}
+	.fixedHeaderContact a {
+		padding: 4px 10px 4px 2px;
+		top: 11%;
+		font-size: 25px;
+	}
+	h1 {
+		width: 60%;
+	}
+	p {
+		width: 60%;
+	}
+	.landingBG h1{
+		font-size: 30px;
+	}
+	.landingBG p {
+		font-size: 20px;
+	}
+	.slideContainer {
+		max-width:500px;
+	}
+}
+@media screen and (min-width: 2500px) and (max-width: 6500px) {
+	.fixedHeaderName {
+		padding: 4px 10px 4px 2px;
+		top: 0%;
+		font-size: 25px;
+	}
+	.fixedHeaderContact a {
+		padding: 4px 10px 4px 2px;
+		top: 11%;
+		font-size: 25px;
+	}
+	h1 {
+		width: 40%;
+	}
+	p {
+		width: 40%;
+	}
+	.landingBG h1{
+		font-size: 30px;
+	}
+	.landingBG p {
+		font-size: 20px;
+	}
+	.slideContainer {
+		max-width:500px;
+	}
+}
